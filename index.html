@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hovno</title>
+    <style>
+        html, body {
+            background-color: #eddbac;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .page {
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .page:nth-of-type(1) {
+            display: flex;
+            align-self: flex-end;
+        }
+
+        .page:nth-of-type(2) {
+            background-color: #eddbac;
+        }
+
+        .img-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            height: 100vh;
+        }
+
+        img#sarka_michal {
+            align-self: center;
+            width: 100vw;
+        }
+        
+        img#img-main {
+            align-self: flex-end;
+            width: 100vw;
+        }
+
+        .paper {
+            align-self: flex-end;
+            height: 100vh;
+            background-color: #fdf1d4;
+        }
+        
+        @media (min-width:641px) {
+            .img-wrapper {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            img#sarka_michal {
+                max-width: 30vw;
+            }
+
+            img#img-main {
+                max-width: 30vw;
+            }
+            
+            .paper {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 30vw;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="img-wrapper">
+        <img id="sarka_michal" src="images/sarka_michal.png">
+        <img id="img-main" src="images/main.png">
+    </div>
+</div>
+<div class="page">
+    <div class="paper">
+    </div>
+</div>
+<script>
+    let i = 0;
+    setInterval(() => {
+        if (i === 0) {
+            window.document.title = 'Picus';
+            i = 1;
+        } else {
+            window.document.title = 'Hovno';
+            i = 0;
+        }
+    }, 2000);
+</script>
+</body>
+</html>
+
+
