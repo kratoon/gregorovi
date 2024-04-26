@@ -40,12 +40,15 @@
 
         img#sarka_michal {
             align-self: center;
-            width: 100vw;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70vw;
         }
         
         img#img-main {
             align-self: flex-end;
             width: 100vw;
+            margin-top: -1rem;
         }
 
         .paper {
@@ -61,10 +64,12 @@
             }
             img#sarka_michal {
                 max-width: 30vw;
+                width: 100vw;
             }
 
             img#img-main {
                 max-width: 30vw;
+                margin-top: 0;
             }
             
             .paper {
@@ -78,7 +83,7 @@
 <body>
 <div class="page">
     <div class="img-wrapper">
-        <img id="sarka_michal" src="images/sarka_michal2.png">
+        <img id="sarka_michal" src="images/sarka_michal2.png" style="z-index: 99">
         <img id="img-main" src="images/main.png">
     </div>
 </div>
